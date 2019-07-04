@@ -1,0 +1,22 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (4 handlers)
+[GIN-debug] GET    /ping                     --> github.com/duyanghao/GinApiServer/pkg/controller.Ping (4 handlers)
+[GIN-debug] GET    /version                  --> github.com/duyanghao/GinApiServer/pkg/controller.Version (4 handlers)
+[GIN-debug] GET    /-/reload                 --> github.com/duyanghao/GinApiServer/pkg/route.InstallRoutes.func1 (4 handlers)
+[GIN-debug] POST   /-/reload                 --> github.com/duyanghao/GinApiServer/pkg/route.InstallRoutes.func1 (4 handlers)
+[GIN-debug] PUT    /-/reload                 --> github.com/duyanghao/GinApiServer/pkg/route.InstallRoutes.func1 (4 handlers)
+[GIN-debug] PATCH  /-/reload                 --> github.com/duyanghao/GinApiServer/pkg/route.InstallRoutes.func1 (4 handlers)
+[GIN-debug] HEAD   /-/reload                 --> github.com/duyanghao/GinApiServer/pkg/route.InstallRoutes.func1 (4 handlers)
+[GIN-debug] OPTIONS /-/reload                 --> github.com/duyanghao/GinApiServer/pkg/route.InstallRoutes.func1 (4 handlers)
+[GIN-debug] DELETE /-/reload                 --> github.com/duyanghao/GinApiServer/pkg/route.InstallRoutes.func1 (4 handlers)
+[GIN-debug] CONNECT /-/reload                 --> github.com/duyanghao/GinApiServer/pkg/route.InstallRoutes.func1 (4 handlers)
+[GIN-debug] TRACE  /-/reload                 --> github.com/duyanghao/GinApiServer/pkg/route.InstallRoutes.func1 (4 handlers)
+[GIN-debug] GET    /api/v1/ping              --> github.com/duyanghao/GinApiServer/pkg/controller.Ping (5 handlers)
+[GIN-debug] GET    /api/v1/todo/get          --> github.com/duyanghao/GinApiServer/pkg/controller.ToDoController.GetToDo-fm (5 handlers)
+{"function_name":"main.main","level":"info","line_num":19,"module_name":"/root/go/src/github.com/duyanghao/GinApiServer/cmd/main.go","msg":"Run server at 0.0.0.0:8081","time":"2019-07-04T16:16:41+08:00"}
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:8081

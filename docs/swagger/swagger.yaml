@@ -1,0 +1,55 @@
+basePath: /apis/v1
+definitions:
+  models.Response:
+    properties:
+      code:
+        type: integer
+      data:
+        type: object
+      message:
+        type: string
+    type: object
+host: '{{.Host}}'
+info:
+  contact:
+    email: 1294057873@qq.com
+    name: duyanghao
+    url: https://duyanghao.github.io
+  description: This is a GinApiServer.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: Swagger GinApiServer
+  version: 0.1.0
+paths:
+  /todo/get:
+    get:
+      description: GetToDo
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Response'
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.Response'
+            type: object
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/models.Response'
+            type: object
+        "403":
+          description: Forbidden
+          schema:
+            $ref: '#/definitions/models.Response'
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.Response'
+            type: object
+      summary: GetToDo
+swagger: "2.0"
