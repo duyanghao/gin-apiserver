@@ -20,7 +20,7 @@ import (
 // @contact.email 1294057873@qq.com
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
-// @BasePath /apis/v1
+// @BasePath /api/v1
 func InstallRoutes(r *gin.Engine) {
 	// Recovery middleware recovers from any panics and writes a 500 if there was one.
 	r.Use(gin.Recovery())

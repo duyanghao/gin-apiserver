@@ -15,7 +15,7 @@
         "version": "0.1.0"
     },
     "host": "{{.Host}}",
-    "basePath": "/apis/v1",
+    "basePath": "/api/v1",
     "paths": {
         "/todo/get": {
             "get": {

@@ -1,4 +1,4 @@
-basePath: /apis/v1
+basePath: /api/v1
 definitions:
   models.Response:
     properties:
