@@ -69,4 +69,4 @@ make dockerfiles.build
 
 ## Refs
 
-* *[GinApiServer Framework](https://duyanghao.github.io/GinApiServer/)
+* [GinApiServer Framework](https://duyanghao.github.io/GinApiServer/)
