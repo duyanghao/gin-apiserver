@@ -1,7 +1,7 @@
 GinApiServer
 ===================
 
-GinApiServer is ApiServer Framework based on [gin](https://github.com/gin-gonic/gin).
+GinApiServer is a HTTP apiserver framework based on [Gin](https://github.com/gin-gonic/gin).
 
 ## Replacement
 
