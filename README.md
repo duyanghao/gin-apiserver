@@ -66,3 +66,7 @@ pkg/
 ```bash
 make dockerfiles.build
 ```
+
+## Refs
+
+* *[GinApiServer Framework](https://duyanghao.github.io/GinApiServer/)
