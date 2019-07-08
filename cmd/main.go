@@ -6,10 +6,12 @@ import (
 	"github.com/duyanghao/GinApiServer/pkg/config"
 	"github.com/duyanghao/GinApiServer/pkg/log"
 	"github.com/duyanghao/GinApiServer/pkg/route"
+	"github.com/duyanghao/GinApiServer/pkg/util"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	util.SetupSigusr1Trap()
 	r := gin.Default()
 	m := config.GetString(config.FLAG_KEY_GIN_MODE)
 	gin.SetMode(m)

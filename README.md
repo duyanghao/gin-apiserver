@@ -58,8 +58,8 @@ pkg/
 ## Feature
 
 * Support configmap reload api
-* Support ping-pong health check
-* Support version get
+* Support ping-pong health&version check
+* Support dump-goroutine-stack-traces
 
 ## Image
 
@@ -70,3 +70,4 @@ make dockerfiles.build
 ## Refs
 
 * [GinApiServer Framework](https://duyanghao.github.io/GinApiServer/)
+* [how-to-dump-goroutine-stack-traces](https://colobu.com/2016/12/21/how-to-dump-goroutine-stack-traces/)
