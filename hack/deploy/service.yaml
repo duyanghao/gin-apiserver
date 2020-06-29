@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: GinApiServer
+  labels:
+    app: GinApiServer
+spec:
+  selector:
+    app: GinApiServer
+  ports:
+    - port: 8081
+      targetPort: 8081
+      protocol: TCP
+      name: http

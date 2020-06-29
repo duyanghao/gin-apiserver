@@ -17,7 +17,7 @@ UNAME := $(shell uname)
 ################################################
 
 .PHONY: all
-all: build test
+all: build
 
 .PHONY: pre-build
 pre-build:
@@ -27,10 +27,6 @@ pre-build:
 build: pre-build build.docs
 	$(MAKE) src.build
 
-.PHONY: test
-test: build
-	$(MAKE) src.test
-
 .PHONY: clean
 clean:
 	$(RM) -rf $(BUILD_FOLDER)
@@ -39,7 +35,7 @@ clean:
 
 .PHONY: download
 download:
-	$(GO_VENDOR) download
+	$(GO_VENDOR) vendor
 
 ## src/ ########################################
 
@@ -49,19 +45,11 @@ src.build:
 	GO111MODULE=on $(GO) build -mod=vendor -v -o $(BUILD_FOLDER)/pkg/cmd/GinApiServer/GinApiServer \
 	./cmd/...
 
-.PHONY: src.test
-src.test:
-	$(GO) test -count=1 -v ./src/...
-
-.PHONY: src.install
-src.install:
-	GO111MODULE=on $(GO) install -v ./src/...
-
 ## dockerfiles/ ########################################
 
 .PHONY: dockerfiles.build
 dockerfiles.build:
-	docker build --no-cache --rm --tag duyanghao/ginapiserver:$(SERVER_VERSION) -f ./docker/Dockerfile .
+	docker build --no-cache --rm --tag duyanghao/GinApiServer:$(SERVER_VERSION) -f ./docker/Dockerfile .
 
 ## git tag version ########################################
 

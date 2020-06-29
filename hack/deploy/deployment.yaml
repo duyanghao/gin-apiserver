@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: GinApiServer
+  labels:
+    app: GinApiServer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: GinApiServer
+  template:
+    metadata:
+      labels:
+        app: GinApiServer
+    spec:
+      containers:
+        - name: GinApiServer
+          image: REPLACE_IMAGE
+          ports:
+            - containerPort: 8081
