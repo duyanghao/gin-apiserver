@@ -8,14 +8,14 @@ GinApiServer is a HTTP apiserver framework based on [Gin](https://github.com/gin
 You can get another ApiServer instance by executing following command:
 
 ```bash
-grep -rl GinApiServer . | xargs sed -i 's/GinApiServer/youapiserver/g'  
+$ grep -rl GinApiServer . | xargs sed -i 's/GinApiServer/youapiserver/g'  
 ```
 
 ## Usage
 
 ```bash
-bash start.sh
-tailf GinApiServer.log
+$ bash start.sh
+$ tailf GinApiServer.log
 ```
 
 ## Structure
@@ -66,6 +66,10 @@ pkg/
 ```bash
 make dockerfiles.build
 ```
+
+## 3rd party Implements
+
+* [coredns-dynapi-adapter - coredns dynamic middleware apiserver adapter](https://github.com/duyanghao/coredns-dynapi-adapter)
 
 ## Refs
 
