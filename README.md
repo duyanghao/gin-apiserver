@@ -29,7 +29,7 @@ GinApiServer is a HTTP apiserver framework based on [Gin](https://github.com/gin
 
 * 3、支持dump-goroutine-stack-traces
   ```bash
-  kill -SIGUSR1 41307
+  $ kill -SIGUSR1 41307
   
   === BEGIN goroutine stack dump ===
   goroutine 20 [running]:
@@ -81,7 +81,7 @@ GinApiServer is a HTTP apiserver framework based on [Gin](https://github.com/gin
 
 ## Framework
 
-`GinApiServer`框架的核心就是pkg包，下面主要针对改包结构进行描述：
+`GinApiServer`框架的核心就是pkg包，下面主要针对该包结构进行描述：
 
 ```bash
 pkg/
@@ -109,7 +109,7 @@ pkg/
 ```
 
 * config：主要用于配置文件，实现：文件+环境变量+命令行参数读取
-* controller: 对应MVC中Controller，调用service中的接口进行处理，自己只拼接数据
+* controller: 对应MVC中controller，调用service中的接口进行实际处理，自己只做数据校验与拼接
 * service: 负责主要的逻辑实现
 * log: 日志模块，实现：模块名(文件名)+函数名+行数+日志级别
 * middleware: 中间件，负责通用的处理，例如：鉴权
@@ -125,7 +125,7 @@ pkg/
   实际使用中，通常需要将`GinApiServer`替换成业务需要的后台server名称，可以执行如下命令：
 
   ```bash
-  grep -rl GinApiServer . | xargs sed -i 's/GinApiServer/youapiserver/g' 
+  $ grep -rl GinApiServer . | xargs sed -i 's/GinApiServer/youapiserver/g' 
   ```
   
 * step2 - 开发业务controller和service
@@ -148,13 +148,13 @@ pkg/
    
 * step3 - 启动服务  
 
-  可以直接启动，如下：
+  可以直接启动运行服务，如下：
 
   ```bash
   $ bash hack/start.sh
   ```
   
-  也可以在Kubernetes集群中启动，如下：
+  也可以在Kubernetes集群中启动服务，如下：
   
   ```bash
   # generated image
