@@ -64,7 +64,7 @@ pkg/
 ## Image
 
 ```bash
-make dockerfiles.build
+$ make dockerfiles.build
 ```
 
 ## 3rd party Implements
