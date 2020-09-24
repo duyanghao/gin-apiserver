@@ -1,7 +1,7 @@
 package log
 
 import (
-	"github.com/duyanghao/GinApiServer/pkg/config"
+	"github.com/duyanghao/gin-apiserver/pkg/config"
 	log "github.com/sirupsen/logrus"
 	"os"
 	"runtime"

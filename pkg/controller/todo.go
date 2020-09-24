@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"github.com/duyanghao/GinApiServer/pkg/models"
-	"github.com/duyanghao/GinApiServer/pkg/service"
+	"github.com/duyanghao/gin-apiserver/pkg/models"
+	"github.com/duyanghao/gin-apiserver/pkg/service"
 	"github.com/gin-gonic/gin"
 )
 

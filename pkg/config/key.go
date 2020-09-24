@@ -1,7 +1,7 @@
 package config
 
 const (
-	SERVICE_NAME = "GinApiServer"
+	SERVICE_NAME = "gin-apiserver"
 
 	FLAG_KEY_SERVER_HOST    = "server.host"
 	FLAG_KEY_SERVER_PORT    = "server.port"

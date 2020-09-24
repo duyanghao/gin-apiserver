@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "This is a GinApiServer.",
-        "title": "Swagger GinApiServer",
+        "description": "This is a gin-apiserver.",
+        "title": "Swagger gin-apiserver",
         "contact": {
             "name": "duyanghao",
             "url": "https://duyanghao.github.io",

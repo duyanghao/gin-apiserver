@@ -3,18 +3,18 @@ package route
 import (
 	"os"
 
-	_ "github.com/duyanghao/GinApiServer/docs"
-	"github.com/duyanghao/GinApiServer/pkg/controller"
-	"github.com/duyanghao/GinApiServer/pkg/log"
-	"github.com/duyanghao/GinApiServer/pkg/middleware"
+	_ "github.com/duyanghao/gin-apiserver/docs"
+	"github.com/duyanghao/gin-apiserver/pkg/controller"
+	"github.com/duyanghao/gin-apiserver/pkg/log"
+	"github.com/duyanghao/gin-apiserver/pkg/middleware"
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
-// @title Swagger GinApiServer
+// @title Swagger gin-apiserver
 // @version 0.1.0
-// @description This is a GinApiServer.
+// @description This is a gin-apiserver.
 // @contact.name duyanghao
 // @contact.url https://duyanghao.github.io
 // @contact.email 1294057873@qq.com
@@ -30,7 +30,7 @@ func InstallRoutes(r *gin.Engine) {
 	// a ping api test
 	r.GET("/ping", controller.Ping)
 
-	// get GinApiServer version
+	// get gin-apiserver version
 	r.GET("/version", controller.Version)
 
 	// config reload

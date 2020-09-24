@@ -1,15 +1,15 @@
 #!/bin/bash
 
-server="./GinApiServer"
+server="./gin-apiserver"
 let item=0
 item=`ps -ef | grep $server | grep -v grep | wc -l`
 
 if [ $item -eq 1 ]; then
-	echo "The GinApiServer is running, shut it down..."
+	echo "The gin-apiserver is running, shut it down..."
 	pid=`ps -ef | grep $server | grep -v grep | awk '{print $2}'`
 	kill -9 $pid
 fi
 
-echo "Start GinApiServer now ..."
+echo "Start gin-apiserver now ..."
 make build
-./build/pkg/cmd/GinApiServer/GinApiServer  >> GinApiServer.log 2>&1 &
+./build/pkg/cmd/gin-apiserver/gin-apiserver  >> gin-apiserver.log 2>&1 &

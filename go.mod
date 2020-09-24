@@ -1,4 +1,4 @@
-module github.com/duyanghao/GinApiServer
+module github.com/duyanghao/gin-apiserver
 
 go 1.14
 

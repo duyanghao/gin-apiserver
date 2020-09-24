@@ -15,11 +15,11 @@ info:
     email: 1294057873@qq.com
     name: duyanghao
     url: https://duyanghao.github.io
-  description: This is a GinApiServer.
+  description: This is a gin-apiserver.
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  title: Swagger GinApiServer
+  title: Swagger gin-apiserver
   version: 0.1.0
 paths:
   /todo/get:

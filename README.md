@@ -1,11 +1,11 @@
-GinApiServer
+gin-apiserver
 ===================
 
-GinApiServer is a HTTP apiserver framework based on [Gin](https://github.com/gin-gonic/gin).
+gin-apiserver is a HTTP apiserver framework based on [Gin](https://github.com/gin-gonic/gin).
 
 ## Introduction
 
-`GinApiServer`是一个基于[gin](https://github.com/gin-gonic/gin)框架写的ApiServer框架，主要用于企业生产环境中的快速开发
+`gin-apiserver`是一个基于[gin](https://github.com/gin-gonic/gin)框架写的ApiServer框架，主要用于企业生产环境中的快速开发
 
 ## Features
 
@@ -23,7 +23,7 @@ GinApiServer is a HTTP apiserver framework based on [Gin](https://github.com/gin
   // a ping api test
   r.GET("/ping", controller.Ping)
   
-  // get GinApiServer version
+  // get gin-apiserver version
   r.GET("/version", controller.Version)
   ```
 
@@ -33,12 +33,12 @@ GinApiServer is a HTTP apiserver framework based on [Gin](https://github.com/gin
   
   === BEGIN goroutine stack dump ===
   goroutine 20 [running]:
-  github.com/duyanghao/GinApiServer/pkg/util.dumpStacks()
-          /root/go/src/github.com/duyanghao/GinApiServer/pkg/util/trap.go:23 +0x6d
-  github.com/duyanghao/GinApiServer/pkg/util.SetupSigusr1Trap.func1(0xc000332240)
-          /root/go/src/github.com/duyanghao/GinApiServer/pkg/util/trap.go:16 +0x34
-  created by github.com/duyanghao/GinApiServer/pkg/util.SetupSigusr1Trap
-          /root/go/src/github.com/duyanghao/GinApiServer/pkg/util/trap.go:14 +0xab
+  github.com/duyanghao/gin-apiserver/pkg/util.dumpStacks()
+          /root/go/src/github.com/duyanghao/gin-apiserver/pkg/util/trap.go:23 +0x6d
+  github.com/duyanghao/gin-apiserver/pkg/util.SetupSigusr1Trap.func1(0xc000332240)
+          /root/go/src/github.com/duyanghao/gin-apiserver/pkg/util/trap.go:16 +0x34
+  created by github.com/duyanghao/gin-apiserver/pkg/util.SetupSigusr1Trap
+          /root/go/src/github.com/duyanghao/gin-apiserver/pkg/util/trap.go:14 +0xab
   
   goroutine 1 [IO wait]:
   internal/poll.runtime_pollWait(0x7fccf3b86f68, 0x72, 0x0)
@@ -64,9 +64,9 @@ GinApiServer is a HTTP apiserver framework based on [Gin](https://github.com/gin
   net/http.ListenAndServe(...)
           /usr/local/go/src/net/http/server.go:3037
   github.com/gin-gonic/gin.(*Engine).Run(0xc000394000, 0xc000355f48, 0x1, 0x1, 0x0, 0x0)
-          /root/go/src/github.com/duyanghao/GinApiServer/vendor/github.com/gin-gonic/gin/gin.go:294 +0x140
+          /root/go/src/github.com/duyanghao/gin-apiserver/vendor/github.com/gin-gonic/gin/gin.go:294 +0x140
   main.main()
-          /root/go/src/github.com/duyanghao/GinApiServer/cmd/main.go:22 +0x2c4
+          /root/go/src/github.com/duyanghao/gin-apiserver/cmd/main.go:22 +0x2c4
   
   goroutine 19 [syscall]:
   os/signal.signal_recv(0xcb28a0)
@@ -81,7 +81,7 @@ GinApiServer is a HTTP apiserver framework based on [Gin](https://github.com/gin
 
 ## Framework
 
-`GinApiServer`框架的核心就是pkg包，下面主要针对该包结构进行描述：
+`gin-apiserver`框架的核心就是pkg包，下面主要针对该包结构进行描述：
 
 ```bash
 pkg/
@@ -122,10 +122,10 @@ pkg/
 
 * step1 - 替换项目名称
 
-  实际使用中，通常需要将`GinApiServer`替换成业务需要的后台server名称，可以执行如下命令：
+  实际使用中，通常需要将`gin-apiserver`替换成业务需要的后台server名称，可以执行如下命令：
 
   ```bash
-  $ grep -rl GinApiServer . | xargs sed -i 's/GinApiServer/youapiserver/g' 
+  $ grep -rl gin-apiserver . | xargs sed -i 's/gin-apiserver/youapiserver/g' 
   ```
   
 * step2 - 开发业务controller和service
@@ -160,10 +160,10 @@ pkg/
   # generated image
   $ make dockerfiles.build
   # retag and push to your docker registry
-  $ docker tag duyanghao/GinApiServer:v0.1.0 xxx/duyanghao/GinApiServer:v0.1.0
-  $ docker push xxx/duyanghao/GinApiServer:v0.1.0
+  $ docker tag duyanghao/gin-apiserver:v0.1.0 xxx/duyanghao/gin-apiserver:v0.1.0
+  $ docker push xxx/duyanghao/gin-apiserver:v0.1.0
   # Update the deployment to use the built image name
-  $ sed -i 's|REPLACE_IMAGE|xxx/duyanghao/GinApiServer:v0.1.0|g' hack/deploy/deployment.yaml
+  $ sed -i 's|REPLACE_IMAGE|xxx/duyanghao/gin-apiserver:v0.1.0|g' hack/deploy/deployment.yaml
   # create service 
   $ kubectl apply -f hack/deploy/service.yaml
   # create deployment
